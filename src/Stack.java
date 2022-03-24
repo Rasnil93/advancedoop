@@ -62,24 +62,4 @@ public class Stack <E> {
         size++;
     }
 
-    public static void main(String[] args) {
-        Stack ourStack = new Stack(4);
-        ourStack.pop();
-        ourStack.push(1);
-        ourStack.push(2);
-        ourStack.push(3);
-        ourStack.pop();
-        ourStack.push(4);
-        ourStack.push(5);
-        ourStack.pop();
-        ourStack.pop();
-        ourStack.pop();
-        ourStack.pop();
-
-        Stack emptyStackTest = new Stack(0);
-        emptyStackTest.pop();
-        emptyStackTest.push(1);
-        emptyStackTest.push(2);
-    }
-
 }
