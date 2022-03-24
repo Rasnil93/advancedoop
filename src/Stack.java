@@ -15,11 +15,26 @@ public class Stack <E> {
         return false;
     }
 
+    public int getIntAtIndex(int index){
+        if(index < size){
+            return stack[index];
+        }
+        return 0;
+    }
+
     public boolean isFull(){
         if(length == size){
             return true;
         }
         return false;
+    }
+
+    public int getSize(){
+        return size;
+    }
+
+    public int getLength(){
+        return length;
     }
 
     public int pop (){
@@ -35,14 +50,6 @@ public class Stack <E> {
 
     public void push(int element) {
         if(isFull()) {
-            /*
-            [1,2,3,4] //length = 4, size = 4
-            push(5)
-            [0,0,0,0,0] //length = 5, size = 0
-            [1,2,3,4 ,0] //length = 5, size = 4
-            nu kan vi pusha wiho
-            [1,2,3,4,5]
-             */
             int[] newArr = new int[length+1];
 
             for (int i = 0; i < length; i++) {
@@ -73,9 +80,6 @@ public class Stack <E> {
         emptyStackTest.pop();
         emptyStackTest.push(1);
         emptyStackTest.push(2);
-
-
-
     }
 
 }
