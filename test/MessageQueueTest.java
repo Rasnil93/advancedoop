@@ -5,6 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class MessageQueueTest {
 
     @Test
+    void testMessageQueue() {
+        MessageQueue mq = new MessageQueue( 4 );
+        assertEquals( mq.size(), 0 );
+        assertFalse( mq.isFull() );
+        assertNull( mq.peek() );
+    }
+
+    @Test
     void testFullQueue(){
         MessageQueue queue = new MessageQueue(4);
         queue.add(new Message("a"));
