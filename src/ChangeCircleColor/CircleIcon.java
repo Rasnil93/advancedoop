@@ -28,24 +28,3 @@ class Circle extends JComponent {
     }
 }
 
-class CircleCon extends JPanel {
-    private int x, y, radius;
-    private Color color;
-
-    public CircleCon(int x, int y, int radius, Color color) {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-        this.color = color;
-    }
-
-    public void paint(Graphics g) {
-        g.setColor(color);
-        g.fillOval(x, y, radius, radius);
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
-}
