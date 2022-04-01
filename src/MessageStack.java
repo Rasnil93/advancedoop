@@ -3,9 +3,9 @@ public class MessageStack {
     private int size = 0;
     private int length = 0;
 
-    public MessageStack(int length) {
-        this.stack = new Message[length];
+    public MessageStack (int length) {
         this.length = length;
+        stack = new Message[length];
     }
 
     public boolean isEmpty(){

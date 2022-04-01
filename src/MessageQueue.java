@@ -77,27 +77,17 @@ public class MessageQueue
         count++;
     }
 
-    public static void main(String[] args) {
-        MessageQueue queue = new MessageQueue(4);
-        queue.add(new Message("a"));
-        queue.add(new Message("b"));
-        queue.add(new Message("c"));
-        queue.add(new Message("d"));
-        queue.add(new Message("e"));
-        queue.remove();
-        queue.add(new Message("q"));
-        queue.add(new Message("p"));
+    public boolean isEmpty() {
+        return count == 0;
+    }
+
+    public boolean isFull() {
+        return count == elements.length;
     }
 
     public int size()
      {
      return count;
-     }
-     
-
-     public boolean isFull()
-     {
-         return count == elements.length;
      }
 
      public Message peek()
