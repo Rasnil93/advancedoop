@@ -3,7 +3,7 @@ import java.util.Arrays;
 public interface Filter {
     boolean accept(String x);
 
-        public static String[] filter(String[] a, Filter f) {
+        static String[] filter(String[] a, Filter f) {
             String[] retArr = new String[a.length];
             int acceptedString = 0;
             for (int i = 0; i < a.length; i++) {
@@ -23,15 +23,8 @@ public interface Filter {
             }
             return returnArr;
         }
-    }
+}
 
 
-/*class FilterImplementation implements Filter{
-    public boolean accept(String x){
-        if(x.length() <= 3){
-            return true;
-        }
-        return false;
-   */
 
 
