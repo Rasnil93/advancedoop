@@ -14,6 +14,18 @@ class StackTest {
         stack = new Stack(4);
     }
 
+    //create a test that pop and push multiple ints into the stack
+    @Test
+    void multiplePopAndPush(){
+        int [] testArray = {1,2,3,4,5,6,7,8,9,10};
+        stack.push(testArray);
+
+        assertEquals(stack.getSize(),10);
+
+        stack.pop(7);
+        assertEquals(stack.getSize(),3);
+    }
+
     @Test
     void testPopAndPush() {
         assertTrue(stack.isEmpty());

@@ -56,6 +56,8 @@ public class Stack {
                 newArr[i] = stack[i];
             }
 
+            length = length + 1;
+
             stack = newArr;
         }
         stack[size] = element;
