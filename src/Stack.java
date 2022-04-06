@@ -1,4 +1,4 @@
-public class Stack <E> {
+public class Stack {
 
     private int[] stack;
     private int size = 0;
@@ -62,4 +62,22 @@ public class Stack <E> {
         size++;
     }
 
+    public int[] pop(int amountOfElements )  {
+        if(amountOfElements > size) {
+            throw new IllegalArgumentException("Not enough elements in stack");
+        }
+
+        int[] tempArr = new int[amountOfElements];
+        for(int i = 0; i < amountOfElements; i++){
+            tempArr[i] = pop();
+        }
+
+        return tempArr;
+    }
+
+    public void push(int[] elements) {
+        for (int element : elements) {
+            push(element);
+        }
+    }
 }
